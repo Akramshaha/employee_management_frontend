@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Employee Management Frontend
+
+Please note that not all the functionality is implemented
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
