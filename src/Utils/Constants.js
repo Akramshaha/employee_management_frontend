@@ -1,0 +1,1 @@
+export const POSTURL = "http://localhost:8081/api/employee";
