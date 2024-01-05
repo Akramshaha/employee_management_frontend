@@ -43,7 +43,7 @@ export default function Login() {
     return ( 
             <>
             <div className="wrapper fadeInDown">
-                <div id="formContent">
+                <div id="formContent" className="p-5 mt-5">
 
                     <form>
                         <input type="text" id="email" className="fadeIn second" value={email} onChange={(event) => setEmail(event.target.value)}  placeholder="login" />
@@ -51,9 +51,9 @@ export default function Login() {
                         
                     
 
-                    <div id="formFooter">
+                    <div id="formFooter" className="p-1 bg-white border-0">
                         
-                    <a className="btn btn-primary" onClick={() => sendSubmitRequest()}>Login</a>
+                        <a className="btn btn-primary" onClick={() => sendSubmitRequest()}>Login</a>
                     </div>
                     </form>
 

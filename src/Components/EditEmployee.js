@@ -68,16 +68,31 @@ function EditEmployee() {
                 <div className="card-body">
                     <h4 className="card-title mb-3">Update Employee Details</h4>
 
-                    <div className="row mb-2">
-                        <div className="col">
-                            <input type="text" className="form-control" placeholder="First name" aria-label="First name"
-                            value={employeeData.firstName} onChange={(e) => updateEmployeeVal("firstName",e.target.value)}/>
+                    
+                        {employeeData.gender === 'MALE' ? (
+                            <div className="row mb-2">
+                                <div className="col">
+                                    <input type="text" className="form-control" placeholder="First name" aria-label="First name"
+                                    value={employeeData.firstName} readOnly/>
+                                </div>
+                                <div className="col">
+                                    <input type="text" className="form-control" placeholder="Last name" aria-label="Last name"
+                                    value={employeeData.lastName} readOnly/>
+                                </div>
+                            </div>
+                        ):(
+                        <div className="row mb-2">
+                            <div className="col">
+                                <input type="text" className="form-control" placeholder="First name" aria-label="First name"
+                                value={employeeData.firstName} onChange={(e) => updateEmployeeVal("firstName",e.target.value)}/>
+                            </div>
+                            <div className="col">
+                                <input type="text" className="form-control" placeholder="Last name" aria-label="Last name"
+                                value={employeeData.lastName} onChange={(e) => updateEmployeeVal("lastName",e.target.value)}/>
+                            </div>
                         </div>
-                        <div className="col">
-                            <input type="text" className="form-control" placeholder="Last name" aria-label="Last name"
-                            value={employeeData.lastName} onChange={(e) => updateEmployeeVal("lastName",e.target.value)}/>
-                        </div>
-                    </div>
+                        )};
+                    
 
                     <div className="row mb-2">
                         <div className="col">
@@ -94,14 +109,14 @@ function EditEmployee() {
 
                    
                     <div className="row mb-2">
-                        <div className="col">
+                        {/* <div className="col">
                             <select className="form-select" aria-label="Select Gender" name="gender" value={employeeData.gender} onChange={(e) => updateEmployeeVal("gender",e.target.value)}>
                             <option >Select Gender</option>
                             {genderList ? genderList.map((mStatus) => 
                                 <option key={mStatus} value={mStatus}>{mStatus}</option>
                             ): <></>}
                             </select>
-                        </div>
+                        </div> */}
                         <div className="col">
                             <select className="form-select" aria-label="Select Marital Status" name="maritalStatus" value={employeeData.maritalStatus} onChange={(e) => updateEmployeeVal("maritalStatus",e.target.value)}>
                                 <option >Select Marital Status</option>
